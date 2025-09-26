@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
       >
         {/* 4. Bungkus setiap elemen dengan motion.div dan terapkan itemVariant */}
         <motion.h2 variants={itemVariant} className="text-4xl font-bold text-brand-light mb-4 font-heading">
-          Let's Connect
+          <h2>Let&apos;s Connect</h2>
         </motion.h2>
         
         <motion.p variants={itemVariant} className="text-brand-muted mb-8 max-w-lg mx-auto">

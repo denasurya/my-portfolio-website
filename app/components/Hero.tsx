@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
             variants={itemVariant}
             className="max-w-3xl text-lg text-brand-muted leading-relaxed shadow-black/50 text-shadow"
           >
-            I'm an educator from Indonesia with a background in Informatics who is passionate about building technology that empowers people. My journey has led me to explore the intersection of Artificial Intelligence and Web3.
+            I&apos;m an educator from Indonesia with a background in Informatics who is passionate about building technology that empowers people. My journey has led me to explore the intersection of Artificial Intelligence and Web3.
           </motion.p>
 
           <motion.div 
