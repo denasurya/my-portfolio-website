@@ -1,26 +1,42 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* --- PERBAIKAN DI SINI --- */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ------------------------- */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: theme('colors.brand-light');
+  font-family: theme('fontFamily.sans');
+
+  /* Kode Baru untuk Latar Belakang Gambar */
+  background-color: theme('colors.brand-dark'); /* Warna dasar jika gambar gagal dimuat */
+  background-image: 
+    linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.95)), /* Lapisan gelap transparan */
+    url('/hero-background.jpg'); /* Gambar Anda */
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Membuat gambar diam saat di-scroll */
+}
+body, a, button {
+  * {
+  cursor: none !important;
+}
+}
+
+.custom-cursor {
+  position: fixed;
+  top: -10px; /* Offset agar titik tengah kursor pas dengan pointer */
+  left: -10px; /* Offset agar titik tengah kursor pas dengan pointer */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none; /* Penting agar kursor tidak mengganggu klik */
+  z-index: 9999;
+  mix-blend-mode: difference; /* Efek warna yang keren saat di atas konten */
 }
