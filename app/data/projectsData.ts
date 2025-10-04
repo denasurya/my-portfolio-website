@@ -66,7 +66,7 @@ export const projects: Project[] = [
       "Adjustable-speed audio benchmark for pronunciation comparison (Web Speech API)."
     ],
     techStack: ["HTML5", "CSS3", "JavaScript", "Vercel Serverless", "Gemini API"],
-    liveDemoUrl: "https://vocaliti-final.vercel.app/",
+    liveDemoUrl: "https://vocality-training.vercel.app/",
     repoUrl: {
       main: "https://github.com/denasurya/vocaliti-final",
     }
