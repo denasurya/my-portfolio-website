@@ -23,11 +23,11 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { to: "hero", label: "Home" },
-    { to: "projects", label: "Projects" },
-    { to: "about", label: "About" },
-    { to: "skills", label: "Skills" },
-    { to: "contact", label: "Contact" },
+    { to: "hero", label: "Beranda" },
+    { to: "projects", label: "Proyek" },
+    { to: "about", label: "Tentang Saya" },
+    { to: "skills", label: "Keahlian" },
+    { to: "contact", label: "Kontak" },
   ];
 
   const handleMobileMenuClick = () => {

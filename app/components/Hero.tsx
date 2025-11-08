@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         <TypeAnimation
           // Urutan teks yang akan diketik
           sequence={[
-            'Hi, I\'m Dena Surya Gumilah 👋',
+            'Dena Surya Gumilah 👋',
             1000, // Tahan selama 1 detik setelah selesai
           ]}
           // Gunakan tag h1 agar style tetap sama
@@ -50,18 +50,18 @@ const Hero: React.FC = () => {
           animate="visible"
           transition={{ staggerChildren: 0.3, delayChildren: 2.5 }} // Delay dimulai setelah animasi ketik selesai
         >
-          <motion.h2 
+          <motion.p 
             variants={itemVariant}
             className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-brand-purple to-brand-cyan bg-clip-text text-transparent mb-6 shadow-black/50 text-shadow"
           >
-            Educator turned Full-Stack AI & Web3 Developer
-          </motion.h2>
+            Product Lead | Ai & Edutech Specialist
+          </motion.p>
 
           <motion.p 
             variants={itemVariant}
             className="max-w-3xl text-lg text-brand-muted leading-relaxed shadow-black/50 text-shadow"
           >
-            I&apos;m an educator from Indonesia with a background in Informatics who is passionate about building technology that empowers people. My journey has led me to explore the intersection of Artificial Intelligence and Web3.
+            Visioner Produk dengan latar belakang Pendidik. Berpengalaman memimpin 2 produk AI Edutech (Cipta Ajar AI & VOCALITY) dari ide hingga validasi dampak. Saat ini mencari peran di tim Produk Edutech untuk membangun solusi yang berdampak nyata bagi pendidikan.
           </motion.p>
 
           <motion.div 
@@ -69,10 +69,10 @@ const Hero: React.FC = () => {
             className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
           >
             <Button href="#projects">
-              View My Projects
+              Lihat Proyek Saya
             </Button>
             <Button href="#contact">
-              Contact Me
+              Hubungi Saya
             </Button>
           </motion.div>
         </motion.div>

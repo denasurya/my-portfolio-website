@@ -59,7 +59,7 @@ const About: React.FC = () => {
           whileInView="visible"
           viewport={{ amount: 0.4 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+          <div className="grid grid-cols-1 items-center">
             
             <motion.div 
               className="relative w-48 h-48 md:w-60 md:h-60 mx-auto"
@@ -76,18 +76,27 @@ const About: React.FC = () => {
             </motion.div>
 
             <motion.div 
-              className="md:col-span-2 text-center md:text-left"
+              className="w-full text-center mt-12"
               variants={textVariant}
             >
               <h2 className="text-4xl font-bold text-brand-light mb-4 font-heading">
-                About Me
+                Tentang Saya
               </h2>
               <p className="text-brand-muted leading-relaxed mb-4 text-justify">
-                Starting as an educator with a background in Informatics, I discovered a passion not only for sharing knowledge but also for building technology that empowers people. This journey has led me to the intersection of Artificial Intelligence (AI) and Web3, where I now focus on creating intelligent, decentralized applications from concept to implementation.
-              </p>
-              <p className="text-brand-muted leading-relaxed text-justify">
-                I thrive on solving complex problems and believe that continuous learning is the key to unlocking the future potential of technology.
-              </p>
+                 Saya berawal dari seorang Guru Informatika di SMPN 3 Lakbok. Di sanalah saya merasakan langsung masalah nyata di lapangan, ketika kurikulum berubah, saya dan rekan guru kewalahan menghabiskan waktu berjam-jam untuk administrasi.
+            </p>
+            <p className="text-brand-muted leading-relaxed mb-4 text-justify">
+            Saya "mencari solusi" dan sadar saya harus membangun sesuatu.
+          </p>
+            <p className="text-brand-muted leading-relaxed mb-4 text-justify">
+           Di situlah peran saya berubah. Saya "sama sekali tidak tau koding", jadi saya harus <em>resourceful</em>. Saya bertindak sebagai Visioner Produk. Saya merancang solusi (Cipta Ajar AI) dan me-manage eksekusi teknisnya (berkolaborasi intensif dengan Google Gemini).
+          </p>
+            <p className="text-brand-muted leading-relaxed mb-4 text-justify">
+           Saya baru sadar, yang saya lakukan itu adalah mengidentifikasi masalah user, merancang solusi, dan memvalidasi dampaknya adalah inti dari Product Management.
+          </p>
+<         p className="text-brand-muted leading-relaxed mb-4 text-justify">
+          Kini, saya "bertaruh segalanya" untuk fokus di jalur ini. Mencari peran di tim Produk Edutech di mana saya bisa menggunakan domain expertise saya (sebagai Pendidik) untuk menjadi jembatan antara kebutuhan nyata di sekolah dan solusi teknologi yang berdampak.
+          </p>
             </motion.div>
 
           </div>

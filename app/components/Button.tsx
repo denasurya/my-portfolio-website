@@ -9,14 +9,22 @@ interface Props {
   // Perbaikan ada di baris di bawah ini
   children: React.ReactNode; 
   isExternal?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const Button: React.FC<Props> = ({ href, children, isExternal = false }) => {
+const Button: React.FC<Props> = ({ href, children, isExternal = false, onClick }) => {
   const buttonClasses = "inline-block font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 border-2 bg-slate-800 border-slate-700 text-brand-muted hover:text-white hover:border-brand-cyan";
 
-  if (isExternal) {
+  if (isExternal || onClick) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={buttonClasses}>
+      <a 
+        href={href} 
+          // --- INI PERBAIKANNYA ---
+        target={isExternal ? "_blank" : "_self"} 
+        rel={isExternal ? "noopener noreferrer" : ""}
+          // ------------------------
+        onClick={onClick} 
+        className={buttonClasses}>
         {children}
       </a>
     );

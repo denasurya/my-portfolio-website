@@ -70,17 +70,17 @@ const Contact: React.FC = () => {
         viewport={{ amount: 0.2 }}
       >
         {/* 4. Bungkus setiap elemen dengan motion.div dan terapkan itemVariant */}
-        <motion.h2 variants={itemVariant} className="text-4xl font-bold text-brand-light mb-4 font-heading">
-          <h2>Let&apos;s Connect</h2>
-        </motion.h2>
+        <motion.p variants={itemVariant} className="text-4xl font-bold text-brand-light mb-4 font-heading">
+          Kontak
+        </motion.p>
         
         <motion.p variants={itemVariant} className="text-brand-muted mb-8 max-w-lg mx-auto">
-          I am currently seeking remote opportunities where I can contribute to innovative projects in the AI and Web3 space. Please feel free to reach out.
+          Saat ini saya mencari peran di tim Produk Edutech untuk membangun solusi yang berdampak nyata bagi pendidikan. Jangan ragu untuk menghubungi saya jika anda tertarik untuk berkolaborasi.
         </motion.p>
 
         <motion.form variants={itemVariant} onSubmit={onSubmit} className="space-y-6 text-left mb-12">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-brand-muted mb-2">Full Name</label>
+            <label htmlFor="name" className="block text-sm font-medium text-brand-muted mb-2">Nama Lengkap</label>
             <input 
               type="text" 
               name="name" 
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-brand-muted mb-2">Email Address</label>
+            <label htmlFor="email" className="block text-sm font-medium text-brand-muted mb-2">Alamat Email</label>
             <input 
               type="email" 
               name="email" 
@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
           </div>
           
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-brand-muted mb-2">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium text-brand-muted mb-2">Pesan</label>
             <textarea 
               name="message" 
               id="message"
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
                 type="submit" 
                 className="bg-gradient-to-r from-brand-purple to-brand-cyan text-white font-semibold py-2 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300 transform hover:scale-105"
               >
-              Send Message
+              Kirim Pesan
             </button>
           </div>
         </motion.form>

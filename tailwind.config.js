@@ -29,6 +29,7 @@ module.exports = {
   },
   // --- PENAMBAHAN DIMULAI DI SINI ---
   plugins: [
+    require('@tailwindcss/typography'),
     function ({ matchUtilities, theme }) {
       matchUtilities(
         {
@@ -39,6 +40,8 @@ module.exports = {
         { values: theme('textShadow') }
       )
     },
+    
   ],
+  
   // --- SELESAI ---
 }

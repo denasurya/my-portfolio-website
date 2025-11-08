@@ -17,14 +17,26 @@ interface Project {
   liveDemoUrl: string;
   repoUrl: { main?: string; frontend?: string; };
   collectionUrl?: string;
+  caseStudy?: {
+    story: string;
+    videoDemoUrl?: string;
+    videoTestimoniUrl?: string;
+    graphImageUrl?: string;
+    ihtPhotoUrls?: string[];
+    journalUrl?: string;
+    announcementImageUrl?: string;
+    eventPhotoUrls?: string[];
+    officialDocUrl?: string;
+  };
 }
 
 interface ProjectCardProps {
   project: Project;
   index: number;
+  onCaseStudyClick: (project: Project) => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onCaseStudyClick }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   // LOGIKA SCROLL-LINKED ANIMATION 
@@ -108,12 +120,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       {/* ----------------------------------------------------------- */}
 
       <div>
-        <p className="text-brand-cyan mb-2 text-sm">{project.category}</p>
+
         <h3 className="text-2xl font-bold text-brand-light mb-4">{project.title}</h3>
+        <p className="text-brand-cyan mb-2 text-sm">{project.category}</p>
         <p className="text-brand-muted mb-6 text-justify">{project.description}</p>
         
-        <h4 className="font-semibold text-brand-light mt-6 mb-2">Key Features:</h4>
-        <ul className="list-disc list-outside pl-5 space-y-2 text-brand-muted text-sm">
+        <h4 className="font-semibold text-brand-light mt-6 mb-2">Poin Utama:</h4>
+        <ul className="list-disc list-outside pl-5 space-y-2 text-brand-muted">
           {project.features.map((feature, i) => (
             <li key={i} className="text-justify">{feature}</li>
           ))}
@@ -126,13 +139,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             </span>
           ))}
         </div>
-        <div className="flex flex-wrap gap-4 items-center">
-          <Button href={project.liveDemoUrl} isExternal={true}>Live Demo</Button>
-          <Button href={project.repoUrl.main || project.repoUrl.frontend || '#'} isExternal={true}>View Code</Button>
-          {project.collectionUrl && (
-            <Button href={project.collectionUrl} isExternal={true}>Rarible</Button>
-          )}
-        </div>
+{/* INI KODE BARU ANDA */}
+        <div className="flex flex-wrap gap-4 items-center">
+          <Button href={project.liveDemoUrl} isExternal={true}>Live Demo</Button>
+
+          {/* --- INI PERUBAHAN UTAMA KITA --- */}
+          {/* 1. Cek dulu apakah 'caseStudy' ada di data proyek ini */}
+          {project.caseStudy && (
+            /* 2. Jika ada, buat tombol baru "Baca Studi Kasus" */
+            <Button 
+              href="#" // Tetap pakai href agar style tidak rusak
+              isExternal={false}
+              onClick={(e) => { // Tambahkan onClick
+                e.preventDefault(); // Mencegah link # berpindah halaman
+                onCaseStudyClick(project); // Memanggil fungsi yang kita siapkan
+              }}
+            >
+              Baca Studi Kasus
+            </Button>
+          )}
+          
+          {/* Tombol "View Code" dan "Rarible" sudah kita HAPUS */}
+        </div>
       </div>
     </motion.div>
   );
