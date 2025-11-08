@@ -86,16 +86,16 @@ const About: React.FC = () => {
                  Saya berawal dari seorang Guru Informatika di SMPN 3 Lakbok. Di sanalah saya merasakan langsung masalah nyata di lapangan, ketika kurikulum berubah, saya dan rekan guru kewalahan menghabiskan waktu berjam-jam untuk administrasi.
             </p>
             <p className="text-brand-muted leading-relaxed mb-4 text-justify">
-            Saya "mencari solusi" dan sadar saya harus membangun sesuatu.
+            Saya &quot;mencari solusi&quot; dan sadar saya harus membangun sesuatu.
           </p>
             <p className="text-brand-muted leading-relaxed mb-4 text-justify">
-           Di situlah peran saya berubah. Saya "sama sekali tidak tau koding", jadi saya harus <em>resourceful</em>. Saya bertindak sebagai Visioner Produk. Saya merancang solusi (Cipta Ajar AI) dan me-manage eksekusi teknisnya (berkolaborasi intensif dengan Google Gemini).
+           Di situlah peran saya berubah. Saya &quot;sama sekali tidak tau koding&quot;, jadi saya harus <em>resourceful</em>. Saya bertindak sebagai Visioner Produk. Saya merancang solusi (Cipta Ajar AI) dan me-manage eksekusi teknisnya (berkolaborasi intensif dengan Google Gemini).
           </p>
             <p className="text-brand-muted leading-relaxed mb-4 text-justify">
            Saya baru sadar, yang saya lakukan itu adalah mengidentifikasi masalah user, merancang solusi, dan memvalidasi dampaknya adalah inti dari Product Management.
           </p>
-<         p className="text-brand-muted leading-relaxed mb-4 text-justify">
-          Kini, saya "bertaruh segalanya" untuk fokus di jalur ini. Mencari peran di tim Produk Edutech di mana saya bisa menggunakan domain expertise saya (sebagai Pendidik) untuk menjadi jembatan antara kebutuhan nyata di sekolah dan solusi teknologi yang berdampak.
+            <p className="text-brand-muted leading-relaxed mb-4 text-justify">
+          Kini, saya &quot;bertaruh segalanya&quot; untuk fokus di jalur ini. Mencari peran di tim Produk Edutech di mana saya bisa menggunakan domain expertise saya (sebagai Pendidik) untuk menjadi jembatan antara kebutuhan nyata di sekolah dan solusi teknologi yang berdampak.
           </p>
             </motion.div>
 

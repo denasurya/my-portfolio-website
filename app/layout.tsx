@@ -18,8 +18,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Dena Surya Gumilah | Full-Stack AI & Web3 Developer",
-  description: "Portfolio Dena Surya, seorang developer yang membangun aplikasi web cerdas dan terdesentralisasi dari konsep hingga deployment.",
+  title: "Dena Surya Gumilah | PRODUCT LEAD | AI & EDUTECH SPECIALIST",
+  description: "Portfolio Dena Surya Gumilah, seorang Product Lead yang memimpin 2 produk AI Edutech dari 0 ke 1 dengan dampak terukur (menghemat >95% waktu administrasi guru).",
 };
 
 export default function RootLayout({
@@ -33,7 +33,7 @@ export default function RootLayout({
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
       
-      <body>
+      <body className={`${poppins.variable} ${spaceGrotesk.variable}`}>
         <CustomCursor />
         <Navbar /> {/* <-- BARIS BARU: Menampilkan komponen Navbar */}
         {children}
